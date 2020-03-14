@@ -22,20 +22,33 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('NINGHAO'),
-        elevation: 0.0,
-        leading: IconButton(
-            icon: Icon(Icons.menu), onPressed: () => debugPrint('菜单按钮')),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.search), onPressed: () => debugPrint('搜索按钮')),
-          IconButton(
-              icon: Icon(Icons.more_horiz), onPressed: () => debugPrint('更多按钮'))
-        ],
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('NINGHAO'),
+          elevation: 0.0,
+          leading: IconButton(
+              icon: Icon(Icons.menu), onPressed: () => debugPrint('菜单按钮')),
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.search), onPressed: () => debugPrint('搜索按钮')),
+            IconButton(
+                icon: Icon(Icons.more_horiz),
+                onPressed: () => debugPrint('更多按钮'))
+          ],
+          bottom: TabBar(tabs: [
+            Tab(icon: Icon(Icons.local_florist)),
+            Tab(icon: Icon(Icons.change_history)),
+            Tab(icon: Icon(Icons.directions_bike)),
+          ]),
+        ),
+        body: TabBarView(children: [
+          Icon(Icons.local_florist, size: 128, color: Colors.black12),
+          Icon(Icons.change_history, size: 128, color: Colors.black12),
+          Icon(Icons.directions_bike, size: 128, color: Colors.black12),
+        ]),
       ),
-      body: null,
     );
   }
 }
