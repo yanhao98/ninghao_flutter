@@ -35,13 +35,19 @@ class Home extends StatelessWidget {
                 icon: Icon(Icons.search), onPressed: () => debugPrint('搜索按钮')),
             IconButton(
                 icon: Icon(Icons.more_horiz),
-                onPressed: () => debugPrint('更多按钮'))
+                onPressed: () => debugPrint('更多按钮')),
           ],
-          bottom: TabBar(tabs: [
-            Tab(icon: Icon(Icons.local_florist)),
-            Tab(icon: Icon(Icons.change_history)),
-            Tab(icon: Icon(Icons.directions_bike)),
-          ]),
+          bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorColor: Colors.black54,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 1.0,
+            tabs: [
+              Tab(icon: Icon(Icons.local_florist)),
+              Tab(icon: Icon(Icons.change_history)),
+              Tab(icon: Icon(Icons.directions_bike)),
+            ],
+          ),
         ),
         body: TabBarView(children: [
           Icon(Icons.local_florist, size: 128, color: Colors.black12),
