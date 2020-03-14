@@ -8,16 +8,27 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              maxHeight: 200.0,
-              maxWidth: 200.0,
-            ),
-            child: Container(
-              color: Colors.pinkAccent,
-            ),
-          )
+          StackDemo(),
         ],
+      ),
+    );
+  }
+}
+
+class ConstrainedBoxDemo extends StatelessWidget {
+  const ConstrainedBoxDemo({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: 200.0,
+        maxWidth: 200.0,
+      ),
+      child: Container(
+        color: Colors.pinkAccent,
       ),
     );
   }
