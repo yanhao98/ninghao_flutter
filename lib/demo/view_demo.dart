@@ -4,6 +4,34 @@ import 'package:ninghao_flutter/model/post.dart';
 class ViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return GridView.count(
+      crossAxisCount: 3, // 每一 列/行 个数。
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      children: _buildTiles(100),
+      // scrollDirection: Axis.horizontal,
+    );
+  }
+
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        alignment: Alignment.center,
+        color: Colors.pink,
+        child: Text(
+          'Item $index',
+          style: TextStyle(fontSize: 18, color: Colors.white),
+        ),
+      );
+    });
+  }
+}
+
+class PageViewBuilderDemo extends StatelessWidget {
+  const PageViewBuilderDemo({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return PageView.builder(
       itemCount: posts.length,
       itemBuilder: _pageItemBuilder,
