@@ -8,9 +8,42 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          IconBadge(Icons.pool),
-          IconBadge(Icons.beach_access, size: 64),
-          IconBadge(Icons.airplanemode_active),
+          SizedBox(
+            width: 200.0,
+            height: 300.0,
+            child: Container(
+              alignment: Alignment(0, -0.9),
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Icon(
+                Icons.ac_unit,
+                color: Colors.white,
+                size: 32.0,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 32.0,
+          ),
+          SizedBox(
+            width: 100.0,
+            height: 100.0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Icon(
+                Icons.brightness_2,
+                color: Colors.white,
+                size: 32.0,
+              ),
+            ),
+          )
+          // IconBadge(Icons.beach_access, size: 64),
+          // IconBadge(Icons.airplanemode_active),
         ],
       ),
     );
