@@ -3,6 +3,79 @@ import 'package:flutter/material.dart';
 class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return Container(
+      // color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(
+              'https://resources.ninghao.org/images/say-hello-to-barry.jpg'),
+          alignment: Alignment.topCenter,
+          // repeat: ImageRepeat.repeatY,
+          fit: BoxFit.cover,
+          colorFilter:
+              ColorFilter.mode(Colors.indigoAccent[400], BlendMode.hardLight),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            child: Icon(
+              Icons.pool,
+              size: 32.0,
+              color: Colors.white,
+            ),
+            // color: Colors.deepOrangeAccent,
+            padding: EdgeInsets.all(16.0),
+            margin: EdgeInsets.all(8.0),
+            height: 90.0,
+            width: 90.0,
+            decoration: BoxDecoration(
+              color: Colors.deepOrangeAccent,
+              border: Border.all(
+                color: Colors.blue,
+                width: 3.0,
+                style: BorderStyle.solid,
+              ),
+              // borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.pink,
+                  blurRadius: 25.0,
+                  spreadRadius: -9.0,
+                  offset: Offset(0, 16.0),
+                )
+              ],
+              shape: BoxShape.circle,
+              // gradient: RadialGradient(
+              //   colors: [
+              //     Colors.pinkAccent,
+              //     Colors.deepPurple,
+              //   ],
+              // ),
+              gradient: LinearGradient(
+                colors: [
+                  Colors.pinkAccent,
+                  Colors.deepPurple,
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class RichTextDemo extends StatelessWidget {
+  const RichTextDemo({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
           text: 'ninghao',
