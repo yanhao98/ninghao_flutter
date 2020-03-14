@@ -8,13 +8,32 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          AspectRatio(
-            aspectRatio: 16.0 / 9.0,
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: 200.0,
+              maxWidth: 200.0,
+            ),
             child: Container(
               color: Colors.pinkAccent,
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class AspectRatioDemo extends StatelessWidget {
+  const AspectRatioDemo({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 16.0 / 9.0,
+      child: Container(
+        color: Colors.pinkAccent,
       ),
     );
   }
