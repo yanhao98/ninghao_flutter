@@ -4,6 +4,66 @@ import 'package:ninghao_flutter/model/post.dart';
 class ViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return GridViewBuilderDemo();
+  }
+}
+
+class GridViewBuilderDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      padding: EdgeInsets.all(8.0),
+      itemCount: posts.length,
+      itemBuilder: _gridItemBuilder,
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 150.0,
+        // crossAxisCount: 3,
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 8.0,
+      ),
+    );
+  }
+
+  Widget _gridItemBuilder(BuildContext context, int index) {
+    Post _post = posts[index];
+    return Container(
+      child: Image.network(
+        _post.imageUrl,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}
+
+class GridViewExtentDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 150.0,
+      crossAxisSpacing: 16.0,
+      mainAxisSpacing: 16.0,
+      children: _buildTiles(100),
+      // scrollDirection: Axis.horizontal,
+    );
+  }
+
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        alignment: Alignment.center,
+        color: Colors.pink,
+        child: Text(
+          'Item $index',
+          style: TextStyle(fontSize: 18, color: Colors.white),
+        ),
+      );
+    });
+  }
+}
+
+class GridViewCountDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3, // 每一 列/行 个数。
       crossAxisSpacing: 16.0,
