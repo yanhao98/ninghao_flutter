@@ -1,6 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PageView.builder(
+      itemCount: posts.length,
+      itemBuilder: _pageItemBuilder,
+    );
+  }
+
+  Widget _pageItemBuilder(BuildContext context, int index) {
+    final Post _post = posts[index];
+    return Stack(
+      children: <Widget>[
+        SizedBox.expand(
+          child: Image.network(
+            _post.imageUrl,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Positioned(
+          bottom: 8.0,
+          left: 8.0,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(_post.title, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(_post.author),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class PageViewDemo extends StatelessWidget {
+  const PageViewDemo({
+    Key key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PageView(
