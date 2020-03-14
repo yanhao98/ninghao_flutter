@@ -12,7 +12,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       home: Home(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
+        splashColor: Colors.white70, // 水波纹颜色
+      ),
     );
   }
 }
@@ -29,7 +33,9 @@ class Home extends StatelessWidget {
           title: Text('NINGHAO'),
           elevation: 0.0,
           leading: IconButton(
-              icon: Icon(Icons.menu), onPressed: () => debugPrint('菜单按钮')),
+            icon: Icon(Icons.menu),
+            onPressed: () => debugPrint('菜单按钮'),
+          ),
           actions: <Widget>[
             IconButton(
                 icon: Icon(Icons.search), onPressed: () => debugPrint('搜索按钮')),
