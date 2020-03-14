@@ -62,13 +62,45 @@ class Home extends StatelessWidget {
             Icon(Icons.directions_bike, size: 128, color: Colors.black12),
           ],
         ),
-        drawer: Container(
-          padding: EdgeInsets.all(8.0),
-          color: Colors.white,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
             children: <Widget>[
-              Text('This is a drawer'),
+              UserAccountsDrawerHeader(
+                accountName: Text('accountName'),
+                accountEmail: Text('accountEmal'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://resources.ninghao.org/images/wanghao.jpg'),
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'Message',
+                  textAlign: TextAlign.right,
+                ),
+                trailing:
+                    Icon(Icons.message, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
+              ),
+              ListTile(
+                title: Text(
+                  'Favorite',
+                  textAlign: TextAlign.right,
+                ),
+                trailing:
+                    Icon(Icons.favorite, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
+              ),
+              ListTile(
+                title: Text(
+                  'Settings',
+                  textAlign: TextAlign.right,
+                ),
+                trailing:
+                    Icon(Icons.settings, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
+              )
             ],
           ),
         ),
