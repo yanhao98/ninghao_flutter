@@ -55,11 +55,24 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(children: [
-          Icon(Icons.local_florist, size: 128, color: Colors.black12),
-          Icon(Icons.change_history, size: 128, color: Colors.black12),
-          Icon(Icons.directions_bike, size: 128, color: Colors.black12),
-        ]),
+        body: TabBarView(
+          children: [
+            Icon(Icons.local_florist, size: 128, color: Colors.black12),
+            Icon(Icons.change_history, size: 128, color: Colors.black12),
+            Icon(Icons.directions_bike, size: 128, color: Colors.black12),
+          ],
+        ),
+        drawer: Container(
+          padding: EdgeInsets.all(8.0),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('This is a drawer'),
+            ],
+          ),
+        ),
+        endDrawer: Text('This is a endDrawer'),
       ),
     );
   }
