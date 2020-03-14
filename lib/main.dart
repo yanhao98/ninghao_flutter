@@ -23,7 +23,18 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('NINGHAO'), elevation: 0.0),
+      appBar: AppBar(
+        title: Text('NINGHAO'),
+        elevation: 0.0,
+        leading: IconButton(
+            icon: Icon(Icons.menu), onPressed: () => debugPrint('菜单按钮')),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.search), onPressed: () => debugPrint('搜索按钮')),
+          IconButton(
+              icon: Icon(Icons.more_horiz), onPressed: () => debugPrint('更多按钮'))
+        ],
+      ),
       body: null,
     );
   }
