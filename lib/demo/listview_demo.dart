@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/demo/post_show.dart';
 import 'package:ninghao_flutter/model/post.dart';
 
 class ListViewDemo extends StatelessWidget {
@@ -42,6 +43,13 @@ class ListViewDemo extends StatelessWidget {
                 highlightColor: Colors.white.withOpacity(0.1),
                 onTap: () {
                   debugPrint('Tap');
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => PostShow(
+                        post: posts[index],
+                      ),
+                    ),
+                  );
                 },
               ),
             ),
