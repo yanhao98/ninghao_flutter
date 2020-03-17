@@ -19,6 +19,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       home: NavigatorDemo(),
+      routes: {
+        '/about': (context) => Page(title: 'About'),
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
