@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
+import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
 
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listview_demo.dart';
-import 'demo/view_demo.dart';
+// import 'demo/view_demo.dart';
 
 void main() => runApp(App());
 
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
-      home: Home(),
+      home: NavigatorDemo(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
