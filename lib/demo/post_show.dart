@@ -15,7 +15,10 @@ class PostShow extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Image.network(post.imageUrl),
+          Hero(
+            tag: 'postImage${post.title}',
+            child: Image.network(post.imageUrl),
+          ),
           Container(
             width: double.infinity,
             padding: EdgeInsets.all(32.0),

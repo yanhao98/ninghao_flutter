@@ -22,11 +22,14 @@ class ListViewDemo extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: Image.network(
-                  post.imageUrl,
-                  fit: BoxFit.cover,
+              Hero(
+                tag: 'postImage${post.title}',
+                child: AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Image.network(
+                    post.imageUrl,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               SizedBox(height: 16),
