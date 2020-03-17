@@ -5,9 +5,6 @@ class SliverDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('data'),
-      ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverSafeArea(
