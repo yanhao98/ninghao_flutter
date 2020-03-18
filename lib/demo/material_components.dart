@@ -5,6 +5,7 @@ import 'package:ninghao_flutter/demo/floating_action_button_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/popup_menu_button_demo.dart';
 import 'package:ninghao_flutter/demo/radio_demo.dart';
+import 'package:ninghao_flutter/demo/slider_demo.dart';
 import 'package:ninghao_flutter/demo/switch_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
@@ -24,6 +25,7 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'CheckBox', page: CheckBoxDemo()),
           ListItem(title: 'Radio', page: RadioDemo()),
           ListItem(title: 'Switch', page: SwitchDemo()),
+          ListItem(title: 'Slider', page: SliderDemo()),
         ],
       ),
     );
