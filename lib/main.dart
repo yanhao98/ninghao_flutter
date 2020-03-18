@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
+import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
 
@@ -19,17 +20,21 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '',
+      initialRoute: '/form',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
+        '/form': (context) => FormDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        // primarySwatch: Colors.yellow,
+        primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
         splashColor: Colors.white70, // 水波纹颜色
+        // accentColor: Color.fromRGBO(3, 54, 255, 1.0),
+        accentColor: Colors.pink,
       ),
     );
   }
