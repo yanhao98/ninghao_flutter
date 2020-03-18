@@ -28,7 +28,11 @@ class _CheckBoxDemoState extends State<CheckBoxDemo> {
               },
               title: Text('CheckboxItem A'),
               subtitle: Text('Description'),
-              secondary: Icon(Icons.bookmark),
+              secondary: SizedBox(
+                height: double.infinity,
+                // width: double.infinity,
+                child: Icon(Icons.bookmark),
+              ),
               selected: _checkboxItemA,
             ),
             Row(

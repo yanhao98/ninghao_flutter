@@ -29,8 +29,11 @@ class _SwitchDemoState extends State<SwitchDemo> {
                 },
                 title: Text('Switch Item A'),
                 subtitle: Text('Description'),
-                secondary: Icon(
-                    _switchItemA ? Icons.visibility : Icons.visibility_off),
+                secondary: SizedBox(
+                  height: double.infinity,
+                  child: Icon(
+                      _switchItemA ? Icons.visibility : Icons.visibility_off),
+                ),
                 selected: _switchItemA,
               ),
               Row(
