@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
+import 'package:ninghao_flutter/demo/material_components.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
 
@@ -20,12 +21,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/form',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
