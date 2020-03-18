@@ -49,18 +49,18 @@ class _RadioDemoState extends State<RadioDemo> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Radio(
-                  //   value: 0,
-                  //   groupValue: _radioGroupA,
-                  //   onChanged: _handleRadioValueChanged,
-                  //   activeColor: Colors.black,
-                  // ),
-                  // Radio(
-                  //   value: 1,
-                  //   groupValue: _radioGroupA,
-                  //   onChanged: _handleRadioValueChanged,
-                  //   activeColor: Colors.black,
-                  // ),
+                  Radio(
+                    value: 0,
+                    groupValue: _radioGroupA,
+                    onChanged: _handleRadioValueChanged,
+                    activeColor: Colors.black,
+                  ),
+                  Radio(
+                    value: 1,
+                    groupValue: _radioGroupA,
+                    onChanged: _handleRadioValueChanged,
+                    activeColor: Colors.black,
+                  ),
                 ],
               ),
             ],

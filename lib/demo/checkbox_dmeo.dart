@@ -34,15 +34,15 @@ class _CheckBoxDemoState extends State<CheckBoxDemo> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                // Checkbox(
-                //   value: _checkboxItemA,
-                //   onChanged: (value) {
-                //     setState(() {
-                //       _checkboxItemA = value;
-                //     });
-                //   },
-                //   activeColor: Colors.black,
-                // ),
+                Checkbox(
+                  value: _checkboxItemA,
+                  onChanged: (value) {
+                    setState(() {
+                      _checkboxItemA = value;
+                    });
+                  },
+                  activeColor: Colors.black,
+                ),
               ],
             )
           ],
