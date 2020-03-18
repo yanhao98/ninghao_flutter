@@ -6,7 +6,7 @@ class CheckBoxDemo extends StatefulWidget {
 }
 
 class _CheckBoxDemoState extends State<CheckBoxDemo> {
-  bool _checkBoxItemA = true;
+  bool _checkboxItemA = true;
 
   @override
   Widget build(BuildContext context) {
@@ -20,25 +20,25 @@ class _CheckBoxDemoState extends State<CheckBoxDemo> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CheckboxListTile(
-              value: _checkBoxItemA,
+              value: _checkboxItemA,
               onChanged: (value) {
                 setState(() {
-                  _checkBoxItemA = value;
+                  _checkboxItemA = value;
                 });
               },
-              title: Text('CheckBoxItem A'),
+              title: Text('CheckboxItem A'),
               subtitle: Text('Description'),
               secondary: Icon(Icons.bookmark),
-              selected: _checkBoxItemA,
+              selected: _checkboxItemA,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 // Checkbox(
-                //   value: _checkBoxItemA,
+                //   value: _checkboxItemA,
                 //   onChanged: (value) {
                 //     setState(() {
-                //       _checkBoxItemA = value;
+                //       _checkboxItemA = value;
                 //     });
                 //   },
                 //   activeColor: Colors.black,
