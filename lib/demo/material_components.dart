@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/buttom_demo.dart';
+import 'package:ninghao_flutter/demo/checkbox_dmeo.dart';
 import 'package:ninghao_flutter/demo/floating_action_button_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/popup_menu_button_demo.dart';
@@ -14,21 +15,11 @@ class MaterialComponents extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListItem(
-            title: 'FloatingActionButton',
-            page: FloatingActionButtonDemo(),
-          ),
-          ListItem(
-            title: 'Button',
-            page: ButtonDemo(),
-          ),
-          ListItem(
-            title: 'PopupMenuButton',
-            page: PopupMenuButtonDemo(),
-          ),
-          ListItem(
-            title: 'Form',
-            page: FormDemo(),
-          ),
+              title: 'FloatingActionButton', page: FloatingActionButtonDemo()),
+          ListItem(title: 'Button', page: ButtonDemo()),
+          ListItem(title: 'PopupMenuButton', page: PopupMenuButtonDemo()),
+          ListItem(title: 'Form', page: FormDemo()),
+          ListItem(title: 'CheckBox', page: CheckBoxDemo()),
         ],
       ),
     );
