@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/buttom_demo.dart';
 import 'package:ninghao_flutter/demo/floating_action_button_demo.dart';
+import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/popup_menu_button_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
@@ -23,6 +24,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(
             title: 'PopupMenuButton',
             page: PopupMenuButtonDemo(),
+          ),
+          ListItem(
+            title: 'Form',
+            page: FormDemo(),
           ),
         ],
       ),
