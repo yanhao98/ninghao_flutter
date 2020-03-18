@@ -7,7 +7,7 @@ class ButtonDemo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         FlatButton(
-          child: Text('Button'),
+          child: Text('FlatButton'),
           onPressed: () {},
           splashColor: Colors.grey,
           textColor: Theme.of(context).accentColor,
@@ -37,7 +37,7 @@ class ButtonDemo extends StatelessWidget {
             ),
           ),
           child: RaisedButton(
-            child: Text('Button'),
+            child: Text('raisedButton'),
             onPressed: () {},
             splashColor: Colors.grey,
             elevation: 0.0,
@@ -75,7 +75,7 @@ class ButtonDemo extends StatelessWidget {
             ),
           ),
           child: OutlineButton(
-            child: Text('Button'),
+            child: Text('OutlineButton'),
             onPressed: () {},
             splashColor: Colors.grey[100],
             borderSide: BorderSide(
@@ -104,9 +104,9 @@ class ButtonDemo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 130.0,
+          width: 200.0,
           child: OutlineButton(
-            child: Text('Button'),
+            child: Text('fixedWidthButton'),
             onPressed: () {},
             splashColor: Colors.grey[100],
             borderSide: BorderSide(
@@ -140,7 +140,7 @@ class ButtonDemo extends StatelessWidget {
         Expanded(
           flex: 2,
           child: OutlineButton(
-            child: Text('Button'),
+            child: Text('expandedButton'),
             onPressed: () {},
             splashColor: Colors.grey[100],
             borderSide: BorderSide(
@@ -156,6 +156,7 @@ class ButtonDemo extends StatelessWidget {
     final Widget buttonBarDemo = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        // 新的 SDK 已经不能调整间距
         Theme(
           data: Theme.of(context).copyWith(
             buttonTheme: ButtonThemeData(
@@ -165,7 +166,7 @@ class ButtonDemo extends StatelessWidget {
           child: ButtonBar(
             children: <Widget>[
               OutlineButton(
-                child: Text('Button'),
+                child: Text('ButtonBar'),
                 onPressed: () {},
                 splashColor: Colors.grey[100],
                 borderSide: BorderSide(
@@ -175,7 +176,7 @@ class ButtonDemo extends StatelessWidget {
                 highlightedBorderColor: Colors.grey,
               ),
               OutlineButton(
-                child: Text('Button'),
+                child: Text('ButtonBar'),
                 onPressed: () {},
                 splashColor: Colors.grey[100],
                 borderSide: BorderSide(
