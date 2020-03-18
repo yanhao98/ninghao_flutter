@@ -25,11 +25,10 @@ class PostShow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(post.title, style: Theme.of(context).textTheme.headline6),
-                Text(post.author, style: Theme.of(context).textTheme.subtitle1),
+                Text(post.title, style: Theme.of(context).textTheme.headline),
+                Text(post.author, style: Theme.of(context).textTheme.subtitle),
                 SizedBox(height: 32.0),
-                Text(post.description,
-                    style: Theme.of(context).textTheme.bodyText2)
+                Text(post.description, style: Theme.of(context).textTheme.body1)
               ],
             ),
           )
