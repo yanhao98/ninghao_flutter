@@ -25,6 +25,7 @@ class App extends StatelessWidget {
         // '/': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
       },
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
