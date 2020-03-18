@@ -6,6 +6,8 @@ class CheckBoxDemo extends StatefulWidget {
 }
 
 class _CheckBoxDemoState extends State<CheckBoxDemo> {
+  bool _checkBoxItemA = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,17 @@ class _CheckBoxDemoState extends State<CheckBoxDemo> {
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[],
+              children: <Widget>[
+                Checkbox(
+                  value: _checkBoxItemA,
+                  onChanged: (value) {
+                    setState(() {
+                      _checkBoxItemA = value;
+                    });
+                  },
+                  activeColor: Colors.black,
+                ),
+              ],
             )
           ],
         ),
