@@ -36,6 +36,19 @@ class _SwitchDemoState extends State<SwitchDemo> {
                 ),
                 selected: _switchItemA,
               ),
+              SwitchListTile(
+                value: _switchItemA,
+                onChanged: (value) {
+                  setState(() {
+                    _switchItemA = value;
+                  });
+                },
+                title: Text('Switch Item A'),
+                subtitle: Text('没有使用 sizedBox 包裹 Icon'),
+                secondary: Icon(
+                    _switchItemA ? Icons.visibility : Icons.visibility_off),
+                selected: _switchItemA,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
