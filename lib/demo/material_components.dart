@@ -7,6 +7,7 @@ import 'package:ninghao_flutter/demo/datetime_demo.dart';
 import 'package:ninghao_flutter/demo/expansion_panel_demo.dart';
 import 'package:ninghao_flutter/demo/floating_action_button_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
+import 'package:ninghao_flutter/demo/paginated_data_table_demo.dart';
 import 'package:ninghao_flutter/demo/popup_menu_button_demo.dart';
 import 'package:ninghao_flutter/demo/radio_demo.dart';
 import 'package:ninghao_flutter/demo/simple_dialog_demo.dart';
@@ -43,6 +44,8 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'ExpansionPanel', page: ExpansionPanelDemo()),
           ListItem(title: 'Chip', page: ChipDemo()),
           ListItem(title: 'DataTable', page: DataTableDemo()),
+          ListItem(
+              title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
         ],
       ),
     );
