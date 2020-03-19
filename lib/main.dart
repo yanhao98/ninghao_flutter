@@ -9,6 +9,7 @@ import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listview_demo.dart';
+import 'demo/state/state_management_demo.dart';
 // import 'demo/view_demo.dart';
 
 void main() => runApp(App());
@@ -21,13 +22,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-management',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
