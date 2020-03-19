@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/buttom_demo.dart';
 import 'package:ninghao_flutter/demo/checkbox_dmeo.dart';
+import 'package:ninghao_flutter/demo/chip_demo.dart';
 import 'package:ninghao_flutter/demo/datetime_demo.dart';
 import 'package:ninghao_flutter/demo/expansion_panel_demo.dart';
 import 'package:ninghao_flutter/demo/floating_action_button_demo.dart';
@@ -39,6 +40,7 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'BottomSheet', page: BottomSheetDemo()),
           ListItem(title: 'SnackBar', page: SnackBarDemo()),
           ListItem(title: 'ExpansionPanel', page: ExpansionPanelDemo()),
+          ListItem(title: 'Chip', page: ChipDemo()),
         ],
       ),
     );
