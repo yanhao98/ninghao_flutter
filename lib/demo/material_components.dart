@@ -10,6 +10,8 @@ import 'package:ninghao_flutter/demo/simple_dialog_demo.dart';
 import 'package:ninghao_flutter/demo/slider_demo.dart';
 import 'package:ninghao_flutter/demo/switch_demo.dart';
 
+import 'alert_dialog_demo.dart';
+
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'Slider', page: SliderDemo()),
           ListItem(title: 'DateTime', page: DateTimeDemo()),
           ListItem(title: 'SimpleDialog', page: SimpleDialogDemo()),
+          ListItem(title: 'AlertDialog', page: AlertDialogDemo()),
         ],
       ),
     );
