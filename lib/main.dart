@@ -10,6 +10,7 @@ import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listview_demo.dart';
 import 'demo/state/state_management_demo.dart';
+import 'demo/stream/stream_demo.dart';
 // import 'demo/view_demo.dart';
 
 void main() => runApp(App());
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/state-management',
+      initialRoute: '/stream',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
@@ -30,6 +31,7 @@ class App extends StatelessWidget {
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
+        '/stream': (context) => StreamDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
