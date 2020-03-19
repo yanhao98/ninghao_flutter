@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/buttom_demo.dart';
+import 'package:ninghao_flutter/demo/card_demo.dart';
 import 'package:ninghao_flutter/demo/checkbox_dmeo.dart';
 import 'package:ninghao_flutter/demo/chip_demo.dart';
 import 'package:ninghao_flutter/demo/data_table_demo.dart';
@@ -46,6 +47,7 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'DataTable', page: DataTableDemo()),
           ListItem(
               title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
+          ListItem(title: 'Card', page: CardDemo()),
         ],
       ),
     );
