@@ -89,7 +89,7 @@ class _StreamDemoHomeState extends State<StreamDemoHome> {
   }
 
   Future<String> fetchData() async {
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 1));
     // throw 'Something happened';
     return 'hello ~';
   }
