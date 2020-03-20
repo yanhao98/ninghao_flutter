@@ -7,6 +7,7 @@ import 'package:ninghao_flutter/demo/material_components.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
 
+import 'demo/animation/animation_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
@@ -26,7 +27,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
@@ -38,6 +39,7 @@ class App extends StatelessWidget {
         '/rxdart': (context) => RxDartDemo(),
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimatinDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
