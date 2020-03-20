@@ -43,10 +43,10 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
     animationColor =
         ColorTween(begin: Colors.red, end: Colors.pink).animate(curve);
 
-    animationDemoController.addListener(() {
-      // print('${animationDemoController.value}');
-      setState(() {});
-    });
+    // animationDemoController.addListener(() {
+    //   // print('${animationDemoController.value}');
+    //   setState(() {});
+    // });
 
     animationDemoController.addStatusListener((AnimationStatus status) {
       print(status);
@@ -64,19 +64,24 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: IconButton(
-        icon: Icon(Icons.favorite),
-        iconSize: animation.value,
-        color: animationColor.value,
-        onPressed: () {
-          print('现在的状态：${animationDemoController.status}');
-          switch (animationDemoController.status) {
-            case AnimationStatus.completed:
-              animationDemoController.reverse();
-              break;
-            default:
-              animationDemoController.forward();
-          }
+      child: AnimatedBuilder(
+        animation: curve,
+        builder: (BuildContext context, Widget child) {
+          return IconButton(
+            icon: Icon(Icons.favorite),
+            iconSize: animation.value,
+            color: animationColor.value,
+            onPressed: () {
+              print('现在的状态：${animationDemoController.status}');
+              switch (animationDemoController.status) {
+                case AnimationStatus.completed:
+                  animationDemoController.reverse();
+                  break;
+                default:
+                  animationDemoController.forward();
+              }
+            },
+          );
         },
       ),
     );
