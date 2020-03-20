@@ -3,6 +3,7 @@ import 'package:ninghao_flutter/demo/basic_demo.dart';
 import 'package:ninghao_flutter/demo/bloc/bloc_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/http/http_demo.dart';
+import 'package:ninghao_flutter/demo/i18n/i18n_demo.dart';
 import 'package:ninghao_flutter/demo/material_components.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
@@ -27,7 +28,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
@@ -40,6 +41,7 @@ class App extends StatelessWidget {
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimatinDemo(),
+        '/i18n': (context) => I18nDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
