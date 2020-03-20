@@ -30,6 +30,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       locale: Locale('zh', 'CN'),
+      // locale: Locale('en', 'US'),
       // localeResolutionCallback: (locale, supportedLocales) {
       //   return Locale('en', 'US');
       // },
