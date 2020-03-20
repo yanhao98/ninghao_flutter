@@ -14,3 +14,4 @@ class MyLocalizations {
         args: [name],
       );
 }
+// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/demo/i18n/intl lib/demo/i18n/intl/my_localizations.dart
