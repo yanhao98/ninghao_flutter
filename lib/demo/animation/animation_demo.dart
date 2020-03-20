@@ -26,9 +26,9 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
     super.initState();
 
     animationDemoController = AnimationController(
-      duration: Duration(milliseconds: 3000),
+      duration: Duration(milliseconds: 1000),
       value: 32.0, // 初始值
-      lowerBound: 0.0,
+      lowerBound: 32.0,
       upperBound: 100.0,
       vsync: this,
     );
@@ -36,6 +36,10 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
     animationDemoController.addListener(() {
       // print('${animationDemoController.value}');
       setState(() {});
+    });
+
+    animationDemoController.addStatusListener((AnimationStatus status) {
+      print(status);
     });
 
     // animationDemoController.forward();
@@ -50,10 +54,18 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ActionChip(
-        label: Text('${animationDemoController.value}'),
+      child: IconButton(
+        icon: Icon(Icons.favorite),
+        iconSize: animationDemoController.value,
         onPressed: () {
-          animationDemoController.forward();
+          print('现在的状态：${animationDemoController.status}');
+          switch (animationDemoController.status) {
+            case AnimationStatus.completed:
+              animationDemoController.reverse();
+              break;
+            default:
+              animationDemoController.forward();
+          }
         },
       ),
     );
