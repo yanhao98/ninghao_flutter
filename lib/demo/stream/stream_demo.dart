@@ -62,7 +62,7 @@ class _StreamDemoHomeState extends State<StreamDemoHome> {
     setState(() {
       _data = data;
     });
-    print('$data');
+    print('$_data');
   }
 
   void onDataTwo(String data) {
