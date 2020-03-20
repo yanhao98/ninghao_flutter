@@ -63,6 +63,10 @@ class CounterBloc {
     print('BLoC');
   }
 
+  void dispose() {
+    _counterActionController.close();
+  }
+
   void onData(int data) {
     print('$data');
   }
