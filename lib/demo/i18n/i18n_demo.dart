@@ -27,4 +27,4 @@ class I18nDemo extends StatelessWidget {
 }
 
 // flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/demo/i18n/intl lib/demo/i18n/intl/my_localizations.dart
-// flutter pub pub run intl_translation:generate_from_arb --generated-file-prefix=my_ —-output-dir=lib/demo/i18n/intl/ —-no-use-deferred-loading lib/demo/i18n/intl/my_localizations.dart lib/demo/i18n/intl/intl_*.arb
+// flutter pub pub run intl_translation:generate_from_arb --generated-file-prefix=my_ --output-dir=lib/demo/i18n/intl/ --no-use-deferred-loading lib/demo/i18n/intl/my_localizations.dart lib/demo/i18n/intl/intl_*.arb
