@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 import 'package:rxdart/rxdart.dart';
 
@@ -32,7 +31,7 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     _textFieldSubject
         // .map((item) => 'map处理后的数据：$item')
         // .where((item) => item.length > 9)
-        .debounceTime(Duration(milliseconds: 500))
+        // .debounceTime(Duration(milliseconds: 500))
         .listen((data) {
       print('$data，length：${data.length}');
     });
