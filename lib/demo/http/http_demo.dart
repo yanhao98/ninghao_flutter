@@ -24,29 +24,39 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
   @override
   void initState() {
     super.initState();
-    // fetchPost();
+    fetchPosts().then((value) => print(value));
     final post = {'title': 'hello', 'description': 'nice to meet you'};
     // print(post['title']);
     // print(post['description']);
 
     final postJson = json.encode(post);
-    print('1：${post.runtimeType}');
-    print('2：${postJson.runtimeType}');
+    print('1：${post.runtimeType}'); // 1：_InternalLinkedHashMap<String, String>
+    print('2：${postJson.runtimeType}'); //  2：String
 
     final postJsonConverted = json.decode(postJson);
-    print('3：${postJsonConverted.runtimeType}');
+    print(
+        '3：${postJsonConverted.runtimeType}'); // 3：_InternalLinkedHashMap<String, dynamic>
 
     final postModel = Post.fromJson(postJsonConverted);
-    print('4：${postModel.runtimeType}');
+    print('4：${postModel.runtimeType}'); // 4：Post
 
-    print('5:${postModel.toJson().runtimeType}');
+    print('5:${postModel.toJson().runtimeType}'); // 5:String
   }
 
-  void fetchPost() async {
+  Future<List<Post>> fetchPosts() async {
     final response =
         await http.get('https://resources.ninghao.net/demo/posts.json');
-    print('statusCode：${response.statusCode}');
-    print('body：${response.body}');
+    // print('statusCode：${response.statusCode}');
+    // print('body：${response.body}');
+    if (response.statusCode == 200) {
+      final responseBody = json.decode(response.body);
+      List<Post> posts = responseBody['posts']
+          .map<Post>((item) => Post.fromJson(item))
+          .toList();
+      return posts;
+    } else {
+      throw Exception('Failed to fetch posts.');
+    }
   }
 
   @override
@@ -56,17 +66,29 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
 }
 
 class Post {
+  final int id;
   final String title;
   final String description;
+  final String author;
+  final String imageUrl;
 
-  Post(this.title, this.description);
+  Post(
+    this.id,
+    this.title,
+    this.description,
+    this.author,
+    this.imageUrl,
+  );
 
   Post.fromJson(Map json)
-      : title = json['title'],
-        description = json['description'];
+      : id = json['id'],
+        title = json['title'],
+        description = json['description'],
+        author = json['author'],
+        imageUrl = json['imageUrl'];
 
   Map toJson() => {
         'title': title,
-        'description': description,
+        'descritpion': description,
       };
 }
