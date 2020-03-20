@@ -33,6 +33,8 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     // Stream.periodic(Duration(seconds: 1), (x) => x.toString());
 
     // _observable.listen(print);
+    // PublishSubject<String> _subject = PublishSubject<String>();
+    // BehaviorSubject<String> _subject = BehaviorSubject<String>();
     ReplaySubject<String> _subject = ReplaySubject<String>(maxSize: 1);
     _subject.add('hello');
     _subject.add('hello2');
