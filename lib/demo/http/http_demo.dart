@@ -30,8 +30,16 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
     // print(post['description']);
 
     final postJson = json.encode(post);
-    print(post.runtimeType);
-    print(postJson.runtimeType);
+    print('1：${post.runtimeType}');
+    print('2：${postJson.runtimeType}');
+
+    final postJsonConverted = json.decode(postJson);
+    print('3：${postJsonConverted.runtimeType}');
+
+    final postModel = Post.fromJson(postJsonConverted);
+    print('4：${postModel.runtimeType}');
+
+    print('5:${postModel.toJson().runtimeType}');
   }
 
   void fetchPost() async {
@@ -45,4 +53,20 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
   Widget build(BuildContext context) {
     return Container();
   }
+}
+
+class Post {
+  final String title;
+  final String description;
+
+  Post(this.title, this.description);
+
+  Post.fromJson(Map json)
+      : title = json['title'],
+        description = json['description'];
+
+  Map toJson() => {
+        'title': title,
+        'description': description,
+      };
 }
