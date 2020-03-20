@@ -26,15 +26,19 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
     super.initState();
 
     animationDemoController = AnimationController(
-      duration: Duration(milliseconds: 1000),
+      duration: Duration(milliseconds: 3000),
+      value: 32.0, // 初始值
+      lowerBound: 0.0,
+      upperBound: 100.0,
       vsync: this,
     );
 
     animationDemoController.addListener(() {
-      print('${animationDemoController.value}');
+      // print('${animationDemoController.value}');
+      setState(() {});
     });
 
-    animationDemoController.forward();
+    // animationDemoController.forward();
   }
 
   @override
@@ -45,6 +49,13 @@ class AnimationDemoHomeState extends State<AnimationDemoHome>
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: ActionChip(
+        label: Text('${animationDemoController.value}'),
+        onPressed: () {
+          animationDemoController.forward();
+        },
+      ),
+    );
   }
 }
