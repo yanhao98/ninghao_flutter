@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
 import 'package:ninghao_flutter/demo/bloc/bloc_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
@@ -26,6 +27,14 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
       initialRoute: '/i18n',
