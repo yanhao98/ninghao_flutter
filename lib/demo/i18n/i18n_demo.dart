@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/demo/i18n/map/my_localizations.dart';
 
 class I18nDemo extends StatelessWidget {
   @override
@@ -13,6 +14,11 @@ class I18nDemo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('${locale.toString()}'),
+            Text(
+              // Localizations.of(context, MyLocalizations).title,
+              MyLocalizations.of(context).title,
+              style: Theme.of(context).textTheme.title,
+            ),
           ],
         ),
       ),

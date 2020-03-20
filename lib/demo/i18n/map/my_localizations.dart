@@ -6,6 +6,10 @@ class MyLocalizations {
 
   MyLocalizations(this.locale);
 
+  static MyLocalizations of(BuildContext context) {
+    return Localizations.of<MyLocalizations>(context, MyLocalizations);
+  }
+
   static Map<String, Map<String, String>> _localized = {
     'en': {
       'title': 'hello',
@@ -20,7 +24,7 @@ class MyLocalizations {
   }
 }
 
-class MyLocalizationsDelegate extends LocalizationsDelegate {
+class MyLocalizationsDelegate extends LocalizationsDelegate<MyLocalizations> {
   @override
   Future<MyLocalizations> load(Locale locale) {
     return SynchronousFuture<MyLocalizations>(MyLocalizations(locale));
