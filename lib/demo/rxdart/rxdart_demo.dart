@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 
 class RxDartDemo extends StatelessWidget {
@@ -24,6 +23,14 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
   @override
   void initState() {
     super.initState();
+
+    Stream<String> _observable = Stream.fromIterable(['hello', '您好']);
+
+    _observable.listen(
+      (data) {
+        print(data);
+      },
+    );
   }
 
   @override
