@@ -10,6 +10,7 @@ import 'package:ninghao_flutter/demo/i18n/intl/my_localizations.dart';
 import 'package:ninghao_flutter/demo/material_components.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
+import 'package:ninghao_flutter/demo/test/test_demo.dart';
 
 import 'demo/animation/animation_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
@@ -45,7 +46,7 @@ class App extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/i18n',
+      initialRoute: '/test',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
@@ -59,6 +60,7 @@ class App extends StatelessWidget {
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimatinDemo(),
         '/i18n': (context) => I18nDemo(),
+        '/test': (context) => TestDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
