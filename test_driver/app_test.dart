@@ -1,5 +1,6 @@
 import 'package:flutter_driver/flutter_driver.dart';
-import 'package:test/test.dart';
+// import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart' hide find;
 
 void main() {
   group('App', () {
