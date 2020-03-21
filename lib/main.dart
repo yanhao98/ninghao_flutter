@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
+import 'package:ninghao_flutter/demo/bloc/bloc_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
+import 'package:ninghao_flutter/demo/http/http_demo.dart';
+import 'package:ninghao_flutter/demo/i18n/i18n_demo.dart';
+// import 'package:ninghao_flutter/demo/i18n/map/my_localizations.dart';
+import 'package:ninghao_flutter/demo/i18n/intl/my_localizations.dart';
+import 'package:ninghao_flutter/demo/material_components.dart';
 import 'package:ninghao_flutter/demo/navigator_demo.dart';
 import 'package:ninghao_flutter/demo/sliver_deno.dart';
+import 'package:ninghao_flutter/demo/test/test_demo.dart';
 
+import 'demo/animation/animation_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listview_demo.dart';
+import 'demo/rxdart/rxdart_demo.dart';
+import 'demo/state/state_management_demo.dart';
+import 'demo/stream/stream_demo.dart';
 // import 'demo/view_demo.dart';
 
 void main() => runApp(App());
@@ -18,14 +30,37 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('zh', 'CN'),
+      // locale: Locale('en', 'US'),
+      // localeResolutionCallback: (locale, supportedLocales) {
+      //   return Locale('en', 'US');
+      // },
+      localizationsDelegates: [
+        MyLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: true,
       // home: NavigatorDemo(),
-      initialRoute: '/form',
+      initialRoute: '/test',
       routes: {
         '/': (context) => Home(),
         // '/': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo(),
+        '/stream': (context) => StreamDemo(),
+        '/rxdart': (context) => RxDartDemo(),
+        '/bloc': (context) => BlocDemo(),
+        '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimatinDemo(),
+        '/i18n': (context) => I18nDemo(),
+        '/test': (context) => TestDemo(),
       },
       darkTheme: ThemeData.dark(),
       theme: ThemeData(
