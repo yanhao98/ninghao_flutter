@@ -8,7 +8,6 @@ void main() {
     final actionChip = find.byValueKey('actionChip');
     final actionChipLabelText = find.byValueKey('actionChipLabelText');
 
-    // 运行之前做的事情
     setUpAll(() async {
       driver = await FlutterDriver.connect();
     });
@@ -20,7 +19,7 @@ void main() {
     });
 
     test('starts at 0', () async {
-      expect(await driver.getText(actionChip), '0');
+      expect(await driver.getText(actionChipLabelText), '0');
     });
 
     test('increments the counter', () async {
